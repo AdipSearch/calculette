@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<button onclick="compter(prompt('Saisissez une phrase pour compter les voyelles'))">Compter les voyelles</button>
+	<p id="demo1"></p>
+
+	<script>
+
+		var vowel=['a','e','i','o','u','y'];
+		
+
+		function compter(mot){
+
+			var positive=[];
+
+			for (var i=0;i<=mot.length;i++){
+
+				var letter =  mot.charAt(i);
+				var a = vowel.indexOf(letter);
+				if (a>=0){
+					positive.push(a);
+				}
+			}
+			document.getElementById("demo1").innerHTML = positive.length;
+		}
+
+
+	</script>
+	
+</body>
+</html>
