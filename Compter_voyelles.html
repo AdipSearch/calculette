@@ -6,11 +6,11 @@
 </head>
 <body>
 
-	<button onclick="compter(prompt('Saisissez une phrase pour compter les voyelles'))">Compter les voyelles</button>
+	
 	<p id="demo1"></p>
 
 	<script>
-
+		
 		var vowel=['a','e','i','o','u','y'];
 		
 
@@ -26,9 +26,15 @@
 					positive.push(a);
 				}
 			}
-			document.getElementById("demo1").innerHTML = positive.length;
+			if (positive.length > 1){
+			document.getElementById("demo1").innerHTML = 'Cette phrase contient ' + positive.length + ' voyelles';
+			}else if (positive.length == 1){
+				document.getElementById("demo1").innerHTML = 'Cette phrase ne contient qu\'une seule voyelle';
+			}else{
+				document.getElementById("demo1").innerHTML = 'Cette phrase ne contient pas de voyelle';
+			}
 		}
-
+			compter(prompt('Saisissez une phrase pour compter les voyelles'));
 
 	</script>
 	

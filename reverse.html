@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<p id="reversed"></p>
+
+	<script>
+
+	
+		function reverse (phrase){
+			for (var i=phrase.length; i>=0; i--){
+				var lettre = phrase[i];
+				if (i==phrase.length){
+					document.getElementById('reversed').innerHTML
+				}else{document.getElementById('reversed').innerHTML += lettre;
+			}
+
+		}
+		
+
+	}
+	reverse(prompt('Saisissez une phrase à inverser'));	
+</script>
+
+</body>
+</html>
